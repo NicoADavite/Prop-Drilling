@@ -1,6 +1,14 @@
 const PlusButton = ({count, setCount}) => {
+
+  const handleClick = ( ) => {
+
+    setCount(count + 1);
+
+    localStorage.setItem("count", (count + 1));
+  }
+
   return (
-    <button onClick={ () => { setCount(count + 1) }}>Sumar 1</button>
+    <button onClick={ handleClick }>Sumar 1</button>
   )
 }
 
